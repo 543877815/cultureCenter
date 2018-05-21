@@ -1,0 +1,66 @@
+#display {
+    background-color: #fff;
+    z-index: 9999;
+    position: relative;
+    @import '../../components/header';
+    .contain {
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+
+        .row {
+            display: flex;
+            flex-flow: row;
+            justify-content: center;
+            margin: 0;
+            .item {
+                width: 24%;
+                height: 346px;
+                margin: 20px;
+                background-color: grey;
+                background-image: url("../assets/imgs/index/4.jpg");
+                background-size: 100% 100%;
+                cursor: pointer;
+                overflow: hidden;
+                position: relative;
+                @media screen and (max-height: 1024px) and (min-height: 960px) {
+                    height: 300px;
+                }
+
+                @media screen and (max-height: 960px) and (min-height: 860px) {
+                    height: 250px;
+                }
+
+                @media screen and (max-height: 860px) and (min-height: 800px) {
+                    height: 200px;
+                }
+
+                @media screen and (max-height: 800px) {
+                    height: 200px;
+                }
+                .overlay {
+                    position: absolute;
+                    overflow: hidden;
+                    background-color: rgba(#000, 0.4);
+                    padding: 14% 12% 0;
+                    height: 100%!important;
+                    width: 100%!important;
+                    box-sizing: border-box;
+                    .title {
+                        color: #fffefe;
+                        font-size: 16px;
+                        font-family: "MicrosoftYaHei";
+                    }
+
+                    .content {
+                        margin-top: 5%;
+                        color: #eff4f6;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+    @import '../../components/index-readmore';
+}
